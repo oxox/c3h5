@@ -1,4 +1,6 @@
+@import "../../../less/mixins.less";
 @import "vars.less";
+@import "mod_ani_shake1.less";
 body{
 	background: #2d2d3f;
 	color:#fff;
@@ -45,4 +47,24 @@ a{
 .mod_demo{
 	width:768px;
 	margin:0 auto;
+	.demo_bd{
+		position: relative;
+		overflow: visible;
+	}
+	.demo_c1{
+		position: absolute;
+		top:-315px;
+		left:30px;
+	}
+	.demo_c2{
+		.size(71px,114px);
+		margin:0 auto;
+		.ani-shake1(5s,linear);
+	}
+	.demo_c3{
+		position: absolute;
+		top:-340px;
+		right:30px;
+	}
 }
+
