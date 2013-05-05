@@ -10,11 +10,15 @@ body {
   font-size: 1.1em;
 }
 a {
-  transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.mod_dummy {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;
 }
 .container,
 .container-fluid {
@@ -94,11 +98,10 @@ footer {
   height: 100%;
 }
 .list_showcase li {
-  transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   margin: 5px 10px;
   padding: 10px;
   border: 2px solid #eee;
