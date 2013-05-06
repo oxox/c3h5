@@ -1,0 +1,64 @@
+.mod_ani_flashing1{
+	.ani-flashing1(2s,linear,0);
+}
+
+.ani-flashing1(@duration,@easing,@delay){
+	.animation(ani_flashing1 @duration @easing @delay infinite);
+}
+
+@keyframes ani_flashing1 {
+	0% { }
+	10% { opacity:0.1;}
+	20% { opacity:0.3; }
+	30% { opacity:0.5; }
+	40% { opacity:0.7; }
+	50% { opacity:1; }
+	60% { opacity:0.7; }
+	70% { opacity:0.5;}
+	80% { opacity:0.3;}
+	90% { opacity:0.1;}
+	/* Missing frames will cause the extra delay */
+	100% { }
+}
+@-moz-keyframes ani_flashing1 {
+	0% { }
+	10% { opacity:0.1;}
+	20% { opacity:0.3; }
+	30% { opacity:0.5; }
+	40% { opacity:0.7; }
+	50% { opacity:1; }
+	60% { opacity:0.7; }
+	70% { opacity:0.5;}
+	80% { opacity:0.3;}
+	90% { opacity:0.1;}
+	/* Missing frames will cause the extra delay */
+	100% { }
+}
+@-webkit-keyframes ani_flashing1 {
+	0% { }
+	10% { opacity:0.1;}
+	20% { opacity:0.3; }
+	30% { opacity:0.5; }
+	40% { opacity:0.7; }
+	50% { opacity:1; }
+	60% { opacity:0.7; }
+	70% { opacity:0.5;}
+	80% { opacity:0.3;}
+	90% { opacity:0.1;}
+	/* Missing frames will cause the extra delay */
+	100% { }
+}
+@-o-keyframes ani_flashing1 {
+	0% { }
+	10% { opacity:0.1;}
+	20% { opacity:0.3; }
+	30% { opacity:0.5; }
+	40% { opacity:0.7; }
+	50% { opacity:1; }
+	60% { opacity:0.7; }
+	70% { opacity:0.5;}
+	80% { opacity:0.3;}
+	90% { opacity:0.1;}
+	/* Missing frames will cause the extra delay */
+	100% { }
+}

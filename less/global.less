@@ -1,4 +1,5 @@
 @import "vars.less";
+@import "mixins.less";
 
 //Webfonts
 @font-face {
@@ -35,7 +36,6 @@ a{
 .page_main{
 	padding-top: 65px;
 }
-
 .mod_circle{
 	position:relative;
 	height: 40px;
@@ -62,9 +62,72 @@ a{
 	right: 0px;
 	border-radius: 50%;
 }
-
+.mod_demo{
+	margin:20px auto;
+	width:768px;
+	border:2px solid #eee;
+	.demo_bd{
+		padding:20px;
+		background-color: #f6f6f6;
+	}
+	.demo_ft{
+		padding:20px;
+		text-align: center;
+	}
+	h3{
+		text-align:center;
+		margin-bottom: 15px;
+	}
+	.demo_tip{
+		margin-top:15px;
+		text-align:center;
+	}
+}
+.mod_demoA{
+	border:none;
+	margin:0 auto;
+	.demo_bd{
+		background-color: transparent;
+	}
+}
 footer{
 	position:fixed;
 	bottom:0;
 	right:20px;
+}
+.row_A{
+	margin-top: 65px;
+}
+//通用slogan模块
+.slogan-unit{
+	text-align:center;
+	position:relative;
+	margin:100px auto 50px;
+	h1{
+		font-size:90px;
+		line-height: 1.2em;
+	}
+}
+.slogan-unit-bd{
+	margin:25px 0;
+}
+.slogan_bg1,.slogan_bg2{
+	opacity: 0.5;
+	padding:5px 0 0 0;
+}
+.slogan_bg1{
+	border-top:1px solid @sloganBGColor;
+	border-bottom:2px solid @sloganBGColor;
+}
+.slogan_bg2{
+	border-top:2px solid @sloganBGColor;
+	border-bottom:1px solid @sloganBGColor;
+}
+
+.site_bg{
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%; 
+	height:100%;
 }

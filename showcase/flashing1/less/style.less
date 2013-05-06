@@ -1,0 +1,24 @@
+@import "../../../less/mixins.less";
+@import "mod_ani_flashing.less";
+
+body{
+	background: #2d2d3f;
+	color:#fff;
+}
+a{
+	color:#fff;
+}
+
+
+.flashing_demo1,.flashing_bd{
+	.square(150px);
+	background:url(../img/lightbulb.png) no-repeat;
+}
+.flashing_demo1{ 
+	background-position:-150px 0; 
+	margin:0 auto;
+}
+.flashing_bd{ 
+	background-position:0 0;
+	opacity:0;
+}

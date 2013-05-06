@@ -1,0 +1,98 @@
+.mod_ani_shaking1 {
+  -webkit-animation: ani_shaking1 2s linear 0 infinite;
+  -moz-animation: ani_shaking1 2s linear 0 infinite;
+  -o-animation: ani_shaking1 2s linear 0 infinite;
+  animation: ani_shaking1 2s linear 0 infinite;
+}
+@keyframes ani_shaking1 {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes ani_shaking1 {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(-3deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+  }
+  75% {
+    -webkit-transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+  }
+}
+@-moz-keyframes ani_shaking1 {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  25% {
+    -moz-transform: rotate(-3deg);
+  }
+  50% {
+    -moz-transform: rotate(0);
+  }
+  75% {
+    -moz-transform: rotate(3deg);
+  }
+  100% {
+    -moz-transform: rotate(0);
+  }
+}
+@-o-keyframes ani_shaking1 {
+  0% {
+    -o-transform: rotate(0);
+  }
+  25% {
+    -o-transform: rotate(-3deg);
+  }
+  50% {
+    -o-transform: rotate(0);
+  }
+  75% {
+    -o-transform: rotate(3deg);
+  }
+  100% {
+    -o-transform: rotate(0);
+  }
+}
+body {
+  background: #2d2d3f;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.shaking_demo1,
+.shaking_bd {
+  width: 50px;
+  height: 440px;
+  margin: 0 auto;
+}
+.shaking_bd {
+  background: url(../img/bg_28.png) no-repeat;
+  transform-origin: center 0;
+  -ms-transform-origin: center 0;
+  /* IE 9 */
+
+  -webkit-transform-origin: center 0;
+  -moz-transform-origin: center 0;
+  /* Safari and Chrome */
+
+}

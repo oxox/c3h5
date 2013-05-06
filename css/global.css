@@ -10,11 +10,15 @@ body {
   font-size: 1.1em;
 }
 a {
-  transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.mod_dummy {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;
 }
 .container,
 .container-fluid {
@@ -53,8 +57,71 @@ a {
   right: 0px;
   border-radius: 50%;
 }
+.mod_demo {
+  margin: 20px auto;
+  width: 768px;
+  border: 2px solid #eee;
+}
+.mod_demo .demo_bd {
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+.mod_demo .demo_ft {
+  padding: 20px;
+  text-align: center;
+}
+.mod_demo h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.mod_demo .demo_tip {
+  margin-top: 15px;
+  text-align: center;
+}
+.mod_demoA {
+  border: none;
+  margin: 0 auto;
+}
+.mod_demoA .demo_bd {
+  background-color: transparent;
+}
 footer {
   position: fixed;
   bottom: 0;
   right: 20px;
+}
+.row_A {
+  margin-top: 65px;
+}
+.slogan-unit {
+  text-align: center;
+  position: relative;
+  margin: 100px auto 50px;
+}
+.slogan-unit h1 {
+  font-size: 90px;
+  line-height: 1.2em;
+}
+.slogan-unit-bd {
+  margin: 25px 0;
+}
+.slogan_bg1,
+.slogan_bg2 {
+  opacity: 0.5;
+  padding: 5px 0 0 0;
+}
+.slogan_bg1 {
+  border-top: 1px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+}
+.slogan_bg2 {
+  border-top: 2px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.site_bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }

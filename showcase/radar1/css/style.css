@@ -1,0 +1,81 @@
+.mod_ani_rotate1 {
+  -webkit-animation: ani_rotate1 2s linear 0 infinite;
+  -moz-animation: ani_rotate1 2s linear 0 infinite;
+  -o-animation: ani_rotate1 2s linear 0 infinite;
+  animation: ani_rotate1 2s linear 0 infinite;
+}
+@-webkit-keyframes ani_rotate1 {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes ani_rotate1 {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes ani_rotate1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background: #2d2d3f;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.radar_demo1 {
+  position: relative;
+  width: 417px;
+  height: 344px;
+  margin: 0 auto;
+}
+.radar_demo1 .radar_bg,
+.radar_demo1 .radar_bd,
+.radar_demo1 .radar_target {
+  position: absolute;
+}
+.radar_demo1 .radar_bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/radar.png) no-repeat;
+}
+.radar_demo1 .radar_bd {
+  top: 40px;
+  left: 36px;
+  width: 220px;
+  height: 220px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url(../img/radar_line.png) 50% 8px no-repeat;
+  transform-origin: 115px 111px;
+  -ms-transform-origin: 115px 111px;
+  /* IE 9 */
+
+  -webkit-transform-origin: 115px 111px;
+  -moz-transform-origin: 115px 111px;
+  /* Safari and Chrome */
+
+}
+.radar_demo1 .radar_target {
+  top: 100px;
+  left: 177px;
+  width: 18px;
+  height: 18px;
+  background: url(../img/radar_target.png) no-repeat;
+}

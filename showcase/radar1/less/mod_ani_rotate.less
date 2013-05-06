@@ -1,0 +1,19 @@
+.mod_ani_rotate1{
+	.ani-rotate1(2s,linear,0);
+}
+
+.ani-rotate1(@duration,@easing,@delay){
+	.animation(ani_rotate1 @duration @easing @delay infinite);
+}
+@-webkit-keyframes ani_rotate1{
+	0%{  -webkit-transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes ani_rotate1{
+	0%{  -moz-transform:rotate(0);}
+	100%{-moz-transform:rotate(360deg);}
+}
+@keyframes ani_rotate1{
+	0%{  transform:rotate(0);}
+	100%{transform:rotate(360deg);}
+}

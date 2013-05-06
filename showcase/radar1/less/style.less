@@ -1,0 +1,40 @@
+@import "../../../less/mixins.less";
+@import "mod_ani_rotate.less";
+
+body{
+	background: #2d2d3f;
+	color:#fff;
+}
+a{
+	color:#fff;
+}
+
+.radar_demo1{
+	position:relative;
+	.size(344px,417px);
+	margin:0 auto;
+	.radar_bg,.radar_bd,.radar_target{
+		position: absolute;
+	}
+	.radar_bg{
+		top:0;
+		left:0;
+		.size(100%,100%);
+		background: url(../img/radar.png) no-repeat;
+	}
+	.radar_bd{
+		top:40px;
+		left:36px;
+		.size(220px,220px);
+		.border-radius(50%);
+		overflow: hidden;
+		background: url(../img/radar_line.png) 50% 8px no-repeat;
+		.transform-origin(115px 111px);
+	}
+	.radar_target{
+		top:100px;
+		left:177px;
+		.square(18px);
+		background: url(../img/radar_target.png) no-repeat;
+	}
+}

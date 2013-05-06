@@ -1,0 +1,147 @@
+.mod_ani_flashing1 {
+  -webkit-animation: ani_flashing1 2s linear 0 infinite;
+  -moz-animation: ani_flashing1 2s linear 0 infinite;
+  -o-animation: ani_flashing1 2s linear 0 infinite;
+  animation: ani_flashing1 2s linear 0 infinite;
+}
+@keyframes ani_flashing1 {
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  /* Missing frames will cause the extra delay */
+}
+@-moz-keyframes ani_flashing1 {
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  /* Missing frames will cause the extra delay */
+}
+@-webkit-keyframes ani_flashing1 {
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  /* Missing frames will cause the extra delay */
+}
+@-o-keyframes ani_flashing1 {
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  /* Missing frames will cause the extra delay */
+}
+body {
+  background: #2d2d3f;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.flashing_demo1,
+.flashing_bd {
+  width: 150px;
+  height: 150px;
+  background: url(../img/lightbulb.png) no-repeat;
+}
+.flashing_demo1 {
+  background-position: -150px 0;
+  margin: 0 auto;
+}
+.flashing_bd {
+  background-position: 0 0;
+  opacity: 0;
+}
