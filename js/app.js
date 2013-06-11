@@ -4,6 +4,7 @@ J(function($,p,pub){
 	p.V = {
 		tplNavItem:document.getElementById('tplNavItem').innerHTML,
 		tplShowcaseItem:document.getElementById('tplShowcaseItem').innerHTML,
+		tplCateItem:document.getElementById('tplCateItem').innerHTML,
 		render:function(d){
 			//菜单
 			d.cateList = [];
@@ -13,6 +14,7 @@ J(function($,p,pub){
 
 			$('#navList').append(Mustache.render(this.tplNavItem,d));
 			$('#cateItemLists').append(Mustache.render(this.tplCateItem,d));
+			console.log(Mustache.render(this.tplCateItem,d));
 
 			//内容
 			$('#portfolio').append(Mustache.render(this.tplShowcaseItem,d));
@@ -26,8 +28,7 @@ J(function($,p,pub){
 					return;
 				};
 				p.V.render(d.data);
-
-				J.scripts.bootup();
+				$win.trigger(pub.id+'OnReady');
 
 			});
 		}
