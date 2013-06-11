@@ -1,6 +1,6 @@
-jQuery.noConflict();
+J(function($,p,pub) {
 
-(function($) {
+	pub.id ="scripts";
 
 	var $body = $('body');
 
@@ -8,7 +8,8 @@ jQuery.noConflict();
 
 	if(touchM) $('.folioThumb').css({'opacity': '1 !important'});
 
-	$(function(){
+	//在数据填充之后调用
+	pub.bootup=function(){
 
 		/* Various jQuery plugins initializations */
 
@@ -197,7 +198,7 @@ jQuery.noConflict();
 		
 		}
 		
-	});
+	};
 
 	/* Links roll over effect */
 	$('a').each(function(){

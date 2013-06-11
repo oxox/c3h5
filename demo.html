@@ -88,42 +88,41 @@
 
     <div id="scripts">
         <div id="mobileCheck"></div>
+        <!--S:templates-->
+        <script type="text/x-tpl-mustache" id="tplCateItem">
+        {{#cateList}}
+        <li>{{name}}</li>
+        {{/cateList}}
+        </script>
+        <script type="text/x-tpl-mustache" id="tplNavItem">
+        {{#cateList}}
+        <li class="menu-item"><p><a href="javascript:;" data-category="true" data-filter="{{name}}">{{name}} ({{cnt}})</a></p></li>
+        {{/cateList}}
+        </script>
+        <script type="text/x-tpl-mustache" id="tplShowcaseItem">
+        {{#items}}
+        <a class="folioItem {{category}}" data-external="no" data-name="showItem" data-sort="{{category}}[1][0]" data-type="{{category}}" href="javascript:;">
+            <img alt="{{name}}" class="folioThumb wp-post-image" height="270" src="{{logo}}" width="360" />
+            <div class="folioTextHolder" >
+                <div class="folioText">
+                    <h3>{{name}}</h3>
+                    <p>{{desc}}</p>
+                </div>
+            </div>
+        </a>
+        {{/items}}
+        </script>
+        <!--E:templates-->
         <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/j.core.js"></script>
+        <script src="js/mustache.js"></script>
+        <script src="js/data.js"></script>
         <script src="js/plugins.min.js" type="text/javascript"></script>
         <script src="js/scripts.js" type="text/javascript"></script>
+        <script src="js/app.js"></script>
+        <script>
+            J.init();
+        </script>
     </div>
-    <!--S:templates-->
-    <script type="text/x-tpl-mustache" id="tplCateItem">
-    {{#cateList}}
-    <li>{{name}}</li>
-    {{/cateList}}
-    </script>
-    <script type="text/x-tpl-mustache" id="tplNavItem">
-    {{#cateList}}
-    <li class="menu-item"><p><a href="javascript:;" data-category="true" data-filter="{{name}}">{{name}} ({{cnt}})</a></p></li>
-    {{/cateList}}
-    </script>
-    <script type="text/x-tpl-mustache" id="tplShowcaseItem">
-    {{#items}}
-    <a class="folioItem {{category}}" data-external="no" data-name="showItem" data-sort="{{category}}[1][0]" data-type="{{category}}" href="javascript:;">
-        <img alt="{{name}}" class="folioThumb wp-post-image" height="270" src="{{logo}}" width="360" />
-        <div class="folioTextHolder" >
-            <div class="folioText">
-                <h3>{{name}}</h3>
-                <p>{{desc}}</p>
-            </div>
-        </div>
-    </a>
-    {{/items}}
-    </script>
-    <!--E:templates-->
-
-    <script src="js/j.core.js"></script>
-    <script src="js/mustache.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-        J.init();
-    </script>
 </body>
 </html>
