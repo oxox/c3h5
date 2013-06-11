@@ -12,9 +12,10 @@ J(function($,p,pub){
 			};
 
 			$('#navList').append(Mustache.render(this.tplNavItem,d));
+			$('#cateItemLists').append(Mustache.render(this.tplCateItem,d));
 
 			//内容
-			$('#showcaseList').append(Mustache.render(this.tplShowcaseItem,d));
+			$('#portfolio').append(Mustache.render(this.tplShowcaseItem,d));
 		}
 	};
 	p.C= {
