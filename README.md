@@ -31,9 +31,6 @@ css3&html5案例
 	+ c3h5/showcase/xxx/cfg.json -案例配置文件，用于首页拉取
 	+ cfg.json示例
 
-	>> 
-		``` js
-		{“name”:”xxx”,”version”:1.0,”desc”:”blabla”}
-		```
+		{"name":"xxx","version":1.0,"desc":"blabla","category":"foobar"}
 
-	**注：案例的html结构参考2中小立建立的detail.html**
+**注：案例的html结构参考2中小立建立的detail.html**
