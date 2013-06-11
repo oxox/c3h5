@@ -33,4 +33,11 @@ css3&html5案例
 
 		{"name":"xxx","version":1.0,"desc":"blabla","category":"foobar"}
 
-**注：案例的html结构参考2中小立建立的detail.html**
+	> 案例的html结构分为三部分内容
+
+	+ 左边展示区
+	+ 右边说明+分享微博
+
+**注：案例的html模板由小立负责输出**，大概效果如下：
+
+![c3h5模板效果图](http://oxox.io/c3h5/img/showcase_tpl.jpg "c3h5模板效果图")
