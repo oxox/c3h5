@@ -72,8 +72,8 @@ J(function($,p,pub){
 				.done(function(item) {
 					item.id = id;
 					//惯例优于配置
-					item.logo = item.logo||('/c3h5/showcase/'+id+'/img/logo.png');
-					item.url = item.url || ('/c3h5/showcase/'+id);
+					item.logo = item.logo||('showcase/'+id+'/img/logo.jpg');
+					item.url = item.url || ('showcase/'+id);
 					cbk(null,item);
 				}).fail(function( jqXHR, textStatus, errorThrown) { 
 					cbk(errorThrown);

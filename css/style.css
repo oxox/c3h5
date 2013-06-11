@@ -1379,11 +1379,13 @@ body {
 
 .project {
    width:100%;
-   max-height:480px;
+   height:480px;
    width:910px;
    margin-left:-455px;
-   position:relative;
+   position:fixed;
    left:50%;
+   top:50%;
+   margin-top:-240px;
    z-index:99999;
    box-shadow:0 0 20px rgba(0,0,0,.25);
    background:#3A3A3A;

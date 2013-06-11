@@ -12,9 +12,10 @@ J(function($,p,pub){
 				d.cateList.push(d.cates[c]);
 			};
 
+			pub.data = d;
+
 			$('#navList').append(Mustache.render(this.tplNavItem,d));
 			$('#cateItemLists').append(Mustache.render(this.tplCateItem,d));
-			console.log(Mustache.render(this.tplCateItem,d));
 
 			//内容
 			$('#portfolio').append(Mustache.render(this.tplShowcaseItem,d));
@@ -33,4 +34,21 @@ J(function($,p,pub){
 			});
 		}
 	};
+
+	pub.getItemById = function(id){
+		if (!pub.data) {
+			return null;
+		};
+		var item = null,
+			len = pub.data.items.length;
+
+		for (var i = len - 1; i >= 0; i--) {
+			if (pub.data.items[i].id===id) {
+				item = pub.data.items[i];
+				break;
+			};
+		};
+		return item;
+	}
+
 });

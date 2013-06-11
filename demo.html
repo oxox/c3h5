@@ -50,7 +50,15 @@
     </div>
 
     <div class="clearfix" id="content">
-        <div>
+        <div id="detailBox">
+            <!--detail S-->
+            <article id="popDetail" class="portfolio type-portfolio status-publish hentry project clearfix" style="display:none">
+                <div class="project_hd">
+                    <h3 id="detailName"></h3><a href="javascript:;" class="close">&times;</a>
+                </div>
+                <iframe id="popDetailIframe" frameborder="0" width="910" height="448"></iframe>
+            </article>
+            <!--detail E-->
             <section class="folioGrid clearfix" id="portfolio">
                 <ul class="folioCategories hidden" id="cateItemLists"></ul>
             </section>
@@ -97,7 +105,7 @@
     </script>
     <script type="text/x-tpl-mustache" id="tplShowcaseItem">
     {{#items}}
-    <a class="folioItem {{category}}" data-external="no" data-name="showItem" data-sort="{{category}}[1][0]" data-type="{{category}}" href="javascript:;">
+    <a class="folioItem {{category}}" data-external="no" data-name="{{id}}" data-sort="{{category}}[1][0]" data-type="{{category}}" href="{{url}}">
         <img alt="{{name}}" class="folioThumb wp-post-image" height="270" src="{{logo}}" width="360" />
         <div class="folioTextHolder" >
             <div class="folioText">
@@ -119,6 +127,7 @@
     <script src="js/mustache.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/detail.js"></script>
     <script>
         J.init();
     </script>
