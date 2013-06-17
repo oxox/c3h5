@@ -1,0 +1,7 @@
+{
+	"name":"step",
+	"version":1.0,
+	"category":"css3",
+	"desc":"用背景实现的动画，一个人在原地走。",
+	"logo":"showcase/step/img/step.png"
+}
