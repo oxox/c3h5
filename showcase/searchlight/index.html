@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>facebook loading</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="一些css3和html5技术的demo和作品"/>
+        <meta name="author" content="stanleyhuang"/>
+        <link rel="stylesheet" href="http://oxox.io/c3h5/css/style.css" />
+        <style type="text/css" media="screen">
+        /* 这里是内容的样式，代码用不到*/
+        body,html {overflow:hidden;background:#e3e3e3;}
+        .sometext {
+            width: 600px;
+            height:480px;
+            background:#e3e3e3;
+            -webkit-transform:rotate(-10deg);
+            -moz-transform:rotate(-10deg);
+            text-align:center;
+            margin-top:35%;
+        }
+        /* 这里是要用的样式 */
+        .searchlight {
+            display:block;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:1px solid #000;
+            pointer-events:none;
+            /* 灯照的地方真正有用的就这个代码 */
+            background-image:-webkit-gradient(radial,50% 50%, 0, 50% 50%, 100, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9)),color-stop(0.8, rgba(0,0,0,0)));
+            background-image:-moz-radial-gradient(50% 50% 45deg,circle closest-side,transparent 0,transparent 100px,rgba(0,0,0,0.9) 120px);
+        } 
+        </style>
+	</head>
+
+	<body> 
+    
+    <!--detail S-->
+        <article id="post-393" class="post-393 portfolio type-portfolio status-publish hentry project clearfix" style="left: 50%;">
+            <section class="projectSlides">
+            <div id="postSlider">
+                <div class="slides_container">
+                    <div class="slides_control" >
+                        <!-- demo start -->
+                        <div class="sometext"> 
+                            <h1>按照灯效果</h1>
+                            <p>这个例子用</p>
+                            <p>只有Chrome和firefox支持，鼠标愰得快就有是点闪的</p>
+                        </div>
+                        <span class="searchlight" id="spot"></span>
+                        <script type="text/javascript">
+                        var spot = document.getElementById('spot');
+                        var width = document.documentElement.clientWidth;
+                        var height = document.documentElement.clientHeight;
+    
+                        /* A bit of JS to respond to mouse events */
+                        function moveSpot(e){
+                            var x = 0;
+                            var y = 0;
+
+                            if (!e) var e = window.event;
+                            if (e.pageX || e.pageY)
+                            {
+                                x = e.pageX;
+                             y = e.pageY;
+                            }
+                            else if (e.clientX || e.clientY)
+                            {
+                                x = e.clientX + document.body.scrollLeft;
+                                y = e.clientY + document.body.scrollTop;
+                            }
+    
+                            if (navigator.userAgent.match('AppleWebKit')) {
+                                var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 100, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9)), color-stop(0.8, rgba(0,0,0,0)))';
+                            } else {
+                                var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 100px,rgba(0, 0, 0, 0.9) 120px)';
+                            }
+                            spot.style.backgroundImage = style;
+                        }
+
+                        window.onload = function() {
+                            window.onmousemove = moveSpot;
+                        }
+                        </script>
+                        <!-- demo end -->
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <section class="projectContent nano has-scrollbar">
+            <div class="content">
+                <div class="layout_hd">
+                    <h4>loading use background-position</h4>
+                    <hr>
+                    <span class="category">CSS3</span>
+                    <hr class="second">
+                    </div>
+                    <div class="layout_bd">
+                    <p>一个用background-position做的loading</p>
+                   
+                </div>
+                <!--<div class="layout_ft">
+                        <a href="#">查看例子</a>
+                </div>-->
+                     
+                </div> 
+                </section>      
+        </article>
+
+    
+    <!--detail E-->
+
+	</body>
+</html>

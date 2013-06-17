@@ -1,8 +1,12 @@
 [
 	"cloud1",
 	"cloud2",
+	"facebookloading",
 	"flashing1",
+	"heartbeat",
+	"loading",
 	"radar1",
+	"searchlight",
 	"shaking1",
 	"step"
 ]
