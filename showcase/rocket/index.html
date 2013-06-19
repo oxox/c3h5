@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>c3h5 - oxox</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="一些css3和html5技术的demo和作品"/>
+        <meta name="author" content="stanleyhuang"/>
+        <link rel="stylesheet" href="http://oxox.io/c3h5/css/style.css" />
+        <style type="text/css" media="screen">
+            .mod_ani_rocket {height:479px;padding-top:1px;background:url(img//bg.png) center center;position:relative;}
+            #rocket{
+                width:275px;
+                height:375px;
+                margin: 30px auto;
+                background:url('img/rocket.png') no-repeat;
+                position:relative;
+            }
+
+            /*  Two steam classes. */
+
+            .steam1,
+            .steam2{
+                position:absolute;
+                bottom:78px;
+                left:50px;
+                width:80px;
+                height:80px;
+                background:url('img/steam.png') no-repeat;
+                opacity:0.8;
+            }
+
+            .steam2{
+
+               /*   .steam2 shows the bottom part (dark version)
+                *   of the background image.
+                */
+
+               background-position:left bottom;
+            }
+        </style>
+	</head>
+
+	<body> 
+    <!--detail S-->
+        <article id="post-393" class="post-393 portfolio type-portfolio status-publish hentry project clearfix" style="left: 50%;">
+            <section class="projectSlides">
+            <div id="postSlider">
+                <div class="slides_container">
+                    <div class="slides_control" >
+                        <div class="mod_ani_rocket">
+                            <div id="rocket" class="mod_ani_rocket_rocket"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			</section>
+
+			<section class="projectContent nano has-scrollbar">
+            <div class="content">
+                <div class="layout_hd">
+					<h4>火箭</h4>
+					<hr>
+					<span class="category">js动画</span>
+                    <hr class="second">
+                    </div>
+                    <div class="layout_bd">
+					<p>用js实现的一个动画，很简单，查看来源和教程请点击下方的查看来源。</p>
+                   
+                </div>
+                <div class="layout_ft">
+                        <a href="http://tutorialzine.com/2010/08/animated-404-not-found-page-css-jquery/" target="_blank">查看来源</a>
+                </div>
+					 
+				</div> 
+                </section>		
+		</article>
+
+    
+    <!--detail E-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(window).load(function(){
+    
+    // We are listening for the window load event instead of the regular document ready.
+    
+    function animSteam(){
+        
+        // Create a new span with the steam1, or steam2 class:
+        
+        $('<span>',{
+            className:'steam'+Math.floor(Math.random()*2 + 1),
+            css:{
+                // Apply a random offset from 10px to the left to 10px to the right
+                marginLeft  : -10 + Math.floor(Math.random()*20)
+            }
+        }).appendTo('#rocket').animate({
+            left:'-=58',
+            bottom:'-=100'
+        }, 120,function(){
+            
+            // When the animation completes, remove the span and
+            // set the function to be run again in 10 milliseconds
+            
+            $(this).remove();
+            setTimeout(animSteam,10);
+        });
+    }
+    
+    function moveRocket(){
+        $('#rocket').animate({'left':'+=100'},5000).delay(1000)
+                    .animate({'left':'-=100'},5000,function(){
+                setTimeout(moveRocket,1000);
+        });
+    }
+
+    // Run the functions when the document and all images have been loaded.
+        
+    moveRocket();
+    animSteam();
+});
+
+    </script>
+
+	</body>
+</html>
