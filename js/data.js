@@ -10,8 +10,8 @@ J(function($,p,pub){
 		},
 		load:function(){
 			$win.trigger(pub.id+'OnLoading');
-
-			var jqxhr = $.ajax( "showcase.json" )
+            var url = location.pathname.substr(0,location.pathname.lastIndexOf('/'))+"/showcase.json";
+			var jqxhr = $.ajax( url )
 				.done(function(items) { 
 					pub.showcaseIds = items;
 					p.C.loadShowcases();
