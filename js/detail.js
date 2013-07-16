@@ -23,19 +23,20 @@ J(function($,p,pub){
 			$('#projectHover').hide();
 			this.$detailBox.removeClass('openedP');
 		},
-		show:function(url){
-			this.$d.show();
-			this.$if.attr('src',url);
-			var urlParts = url.split('/'),
-				item = J.app.getItemById(urlParts[urlParts.length-1]);
+		show:function(id){
+			var item = J.app.getItemById(id);
 			if (item) {
+				this.$d.show();
 				this.$name.html(item.name);
+				this.$if.attr('src',item.url);
+			}else{
+			    alert('未找到id为'+id+'的案例！');
 			};
 		}
 	};
 
-	pub.show = function(url){
-		p.V.show(url);
+	pub.show = function(id){
+		p.V.show(id);
 	};
 
 });

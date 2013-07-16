@@ -35,7 +35,7 @@ J(function($,p,pub){
 			this.$portfolio.append(Mustache.render(this.tplShowcaseItem,d));
 
             $win.trigger(pub.id+'OnUIReady');
-            this.$loading.modernloading('stop').remove();
+            this.$loading.remove();
             $('body').removeClass('loading');
 		}
 	};
