@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>facebook loading</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="一些css3和html5技术的demo和作品"/>
+        <meta name="author" content="stanleyhuang"/>
+        <link rel="stylesheet" href="http://oxox.io/c3h5/css/style.css" />
+        <script type="text/javascript" src="http://st.icson.com/static_v1/js/jquery-1.5.1.min.js" charset="utf-8"></script>
+        <style type="text/css" media="screen">
+            .wrap_slide {position:absolute;top:0;left:0;z-index:9999;width:100%;height:100%;}
+            .wrap_slide .slide_l {width:0%;height:100%;position:absolute;top:0;left:0;background:url(img/a_101.gif) repeat-y right top;z-index:9999;}
+            .wrap_slide .slide_l .slide_l_in {width:100%;height:100%;float:right;background:url(img/a_103.png) no-repeat right top;}
+            .wrap_slide .slide_r {float:right;width:0%;height:100%;position:absolute;top:0;right:0;background:url(img/a_102.gif) repeat-y left top;z-index:9998;}
+            .wrap_slide .slide_r .slide_r_in {width:100%;height:100%;float:left;background:url(img/a_104.png) no-repeat left top;}
+        </style>
+	</head>
+
+	<body> 
+    
+    <!--detail S-->
+        <article id="post-393" class="post-393 portfolio type-portfolio status-publish hentry project clearfix" style="left: 50%;z-index:999">
+            <section class="projectSlides">
+            <div id="postSlider">
+                <div class="slides_container">
+                    <div class="slides_control" >
+                        <!-- demo start -->
+                        <script type="text/javascript">
+                            //先返回顶部
+                            $('html,body').animate({scrollTop:0},1000);
+                            //为了适应宽屏加了两张背景图，太大的还是搞不定的
+                            $("body").append('<div class="wrap_slide"><div class="slide_l"><div class="slide_l_in"></div></div><div class="slide_r"><div class="slide_r_in"></div></div></div>');
+                            var _wrap_slide = $(".wrap_slide");
+                            _wrap_slide.width($(window).width());
+                            _wrap_slide.height($(window).height());
+                            _slideWidthLeft = ($(window).width())/2+149;//中间重合的部分
+                            _slideWidthRight = _slideWidthLeft;
+                            $(".slide_l").animate({width:_slideWidthLeft+'px'},'slow','swing').delay(1000).animate({width:'toggle'},1000,'swing',function(){ _wrap_slide.remove();});
+                            $(".slide_r").animate({width:_slideWidthRight+'px'},'slow','swing').delay(1000).animate({width:'toggle'},1000,'swing');
+                        </script>
+                        <!-- demo end -->
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <section class="projectContent nano has-scrollbar">
+            <div class="content">
+                <div class="layout_hd">
+                    <h4>芝麻关门又开门</h4>
+                    <hr>
+                    <span class="category">jquery</span>
+                    <hr class="second">
+                    </div>
+                    <div class="layout_bd">
+                    <p>一个jq做的简单效果</p>
+                   
+                </div>
+                <!--<div class="layout_ft">
+                        <a href="#">查看例子</a>
+                </div>-->
+                     
+                </div> 
+                </section>      
+        </article>
+
+    
+    <!--detail E-->
+
+	</body>
+</html>

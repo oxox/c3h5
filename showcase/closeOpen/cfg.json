@@ -1,0 +1,7 @@
+{
+	"name":"close-open-door",
+	"version":1.0,
+	"category":"jquery",
+	"desc":"一个用jquery做的简单浮层关闭打开的效果",
+	"logo":"showcase/closeopen/img/logo.jpg"
+}
