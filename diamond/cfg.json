@@ -1,0 +1,7 @@
+{
+	"name":"diamond",
+	"version":1.0,
+	"category":"jquery",
+	"desc":"一个菱形的布局，hover反色，用图片",
+	"logo":"showcase/diamond/img/logo.jpg"
+}

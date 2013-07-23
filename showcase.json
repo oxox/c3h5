@@ -1,5 +1,11 @@
 [
     {
+        "name":"diamond",
+        "version":1.0,
+        "category":"jquery",
+        "desc":"菱形排列，hover反色"
+    },
+    {
         "name":"closeOpen",
         "version":1.0,
         "category":"jquery",
