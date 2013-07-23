@@ -1,4 +1,10 @@
 [
+    {
+        "name":"closeOpen",
+        "version":1.0,
+        "category":"jquery",
+        "desc":"一个类似关开门的效果"
+    },
 	{
         "name":"galaxyloading",
         "version":1.0,
