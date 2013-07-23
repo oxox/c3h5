@@ -10,11 +10,12 @@ J(function($,p,pub){
 		},
 		load:function(){
 			$win.trigger(pub.id+'OnLoading');
-
-			var jqxhr = $.ajax( "showcase.json" )
+            var baseUrl = location.pathname.substr(0,location.pathname.lastIndexOf('/'))+'/';
+                url = baseUrl+"showcase.json";
+			var jqxhr = $.ajax( url )
 				.done(function(items) { 
-					pub.showcaseIds = items;
-					p.C.loadShowcases();
+					pub.showcases = items;
+					p.C.loadShowcases(baseUrl);
 				}).fail(function( jqXHR, textStatus, errorThrown) { 
 					$win.trigger(pub.id+'OnLoaded',[{
 						"isOk":false,
@@ -22,8 +23,8 @@ J(function($,p,pub){
 					}]);
 				}).always(function() { });
 		},
-		loadShowcases:function(){
-			var len = pub.showcaseIds.length;
+		loadShowcases:function(baseUrl){
+			var len = pub.showcases.length;
 			if (len===0) {
 				$win.trigger(pub.id+'OnLoaded',[{
 					"isOk":true,
@@ -32,52 +33,33 @@ J(function($,p,pub){
 				return;
 			};
 			
-			var ids = pub.showcaseIds.concat([]),
-			items = [],
-			cates = {},
-			cbk = function(err,item){
-
-				if (err) {
-					return;
-				};
-				
-				if (cates[item.category]) {
-					cates[item.category].cnt+=1;
-				}else{
-					cates[item.category]={
-						name:(item.category||item.name),
-						cnt:1
-					};
-				};
-				items.push(item);
-
-				if (ids.length===0) {
-					$win.trigger(pub.id+'OnLoaded',[{
-						"isOk":true,
-						"data":{
-							"items":items,
-							"cates":cates
-						}
-					}]);
-					return;
-				};
-				p.C.loadSingleShowcase(ids.splice(0,1)[0],cbk);
+			var cates = {},
+			    item = null;
+			
+			for(var i=0; i<len; i++){
+			    item = pub.showcases[i];
+			    item.id = item.id||item.name;
+                //惯例优于配置
+                item.logo = item.logo||(baseUrl+'showcase/'+item.id+'/img/logo.jpg');
+                item.url = item.url || (baseUrl+'showcase/'+item.id);
+			    if (cates[item.category]) {
+                    cates[item.category].cnt+=1;
+                }else{
+                    cates[item.category]={
+                        name:(item.category||item.name),
+                        cnt:1
+                    };
+                };
 			};
+			
+			$win.trigger(pub.id+'OnLoaded',[{
+                "isOk":true,
+                "data":{
+                    "items":pub.showcases,
+                    "cates":cates
+                }
+            }]);
 
-			p.C.loadSingleShowcase(ids.splice(0,1)[0],cbk);
-
-		},
-		loadSingleShowcase:function(id,cbk){
-			var jqxhr = $.ajax( "showcase/"+id+"/cfg.json" )
-				.done(function(item) {
-					item.id = id;
-					//惯例优于配置
-					item.logo = item.logo||('showcase/'+id+'/img/logo.jpg');
-					item.url = item.url || ('showcase/'+id);
-					cbk(null,item);
-				}).fail(function( jqXHR, textStatus, errorThrown) { 
-					cbk(errorThrown);
-				}).always(function() { });
 		}
 	};
 

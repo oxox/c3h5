@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
-<!--[if IE 9]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if lt IE 8]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
     <meta content="oxox.io" name="author" />
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
-    <title>C3H5 - OXOX.io</title>
+    <title>Css3+Html5 - OXOX.io</title>
+    <link rel="stylesheet" href="//oxox.io/assets/css/reset.css" type="text/css" media="screen" charset="utf-8"/>
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="css/fonts.css" rel="stylesheet" type="text/css" />
-    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="//oxox.io/assets/js/libs/html5.js"></script><![endif]-->
 </head>
-<body class="home page page-id-8 page-template page-template-template-portfolio-php closedSidebars Orange Autohide Left Fill aa Default" id="body">
-    <div id="sidebar">
-        <header id="header">
-            <div id="logo">
-                <a href="#"><img alt="oxox" src="img/logo.png" /></a>
+<body class="page loading" id="body">
+    <div id="siteLoading" class="modern-loading"></div>
+    <aside id="sidebar" class="aside">
+        <header id="header" class="aside_hd">
+            <div id="logo" class="logo">
+                <a href="//oxox.io"><img alt="oxox" src="img/logo.png" /></a>
             </div>
 
-            <p id="tagline">OXOX front-end team, To be num.1~</p>
+            <p id="tagline" class="tagline">A WTF Web Front-end Team</p>
         </header>
 
-        <nav id="menu">
+        <nav id="menu" class="menu">
             <ul class="main-menu" id="menu-main-menu">
                 <li class="parent opened" id="menu-item-1162">
-                    <p><a href="demo.html" style="color: rgb(255, 255, 255);">C3H5案例</a></p>
+                    <p><a href="//oxox.io/c3h5" style="color: rgb(255, 255, 255);">Css3|Html5案例</a></p>
                     <div>
                         <ul class="sub-menu" id="navList">
-                            <li class="selected">
-                                <p><a data-all="true" data-filter="*" href="demo.html" title="allportfolio">All (9999)</a></p>
+                            <li id="navListLi0" class="menu-item selected">
+                                <p><a data-all="true" data-filter="*" href="#/category/all" title="all showcases">All (<span id="lblCntShowcase"></span>)</a></p>
                             </li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </nav>
-        <form id="responsiveMenu">
+        <div class="mobile_menu" id="responsiveMenu">
             <select>
                 <option selected data-href="#">分类菜单</option>
                 <option data-href="#111">分类分类1</option>
@@ -44,52 +45,52 @@
                 <option data-href="#111">分类分类3</option>
                 <option data-href="#111">分类分类4</option>
             </select>
-        </form>
-        <footer id="copy">
+        </div>
+        <footer id="copy" class="copyright">
             <p>Copyright © 2013 oxox.io.</p>
-        </footer><a class="" href="http://demo.krownthemes.com/wowway/#" id="close">close sidebar</a>
-    </div>
+        </footer>
+        <a class="lk_close" href="javascript:;" id="close">close sidebar</a>
+    </aside>
 
-    <div class="clearfix" id="content">
-        <div id="detailBox">
+    <div class="clearfix" id="content" class="content">
+        <div id="detailBox" class="content_inner">
             <!--detail S-->
-            <article id="popDetail" class="portfolio type-portfolio status-publish hentry project clearfix" style="display:none">
-                <div class="project_hd">
+            <article id="popDetail" class="pop_showcase clearfix" style="display:none">
+                <div class="pop_hd">
                     <h3 id="detailName"></h3><a href="javascript:;" class="close">&times;</a>
                 </div>
-                <iframe id="popDetailIframe" frameborder="0" width="910" height="448"></iframe>
+                <div class="pop_bd"><iframe id="popDetailIframe" frameborder="0"></iframe></div>
             </article>
             <!--detail E-->
-            <section class="folioGrid clearfix" id="portfolio">
+            <section class="portfolio folioGrid clearfix" id="portfolio">
                 <ul class="folioCategories hidden" id="cateItemLists"></ul>
             </section>
 
-            <div class="hidden hasButtons" id="projectHover">
+            <div class="portfolio_nav hidden hasButtons" id="projectHover">
                 <a class="btnNext hoverBack" href="#">Next</a> <a class=
                 "btnClose hoverBack" href="#">Close</a> <a class=
                 "btnPrev hoverBack" href="#">Prev</a>
             </div>
-        </div><!-- top footer -->
+        </div>
 
-        <footer class="footer" id="topFooter">
+        <footer class="footer footer1" id="topFooter">
             <div class="left">
                 <div class="widget clearfix widget_search">
                     <form action="demo.html" class="searchBox" id="searchform" method="get" name="searchform">
                         <label class="screen-reader-text hidden" for="s">Search for:</label> <input data-value="搜索动画" id="s" name="s" type="text" value="搜索动画" />
-                        <!--<input type="submit" id="searchsubmit" value="Search" />-->
                     </form>
                 </div>
             </div>
 
-            <div class="right">
+            <div id="topFooterRight" class="right">
                 <div class="widget clearfix">
-                    <p class="developedTeam">Proudly Developed By<strong><a href="#">oxox.io</a></strong></p>
+                    <p class="developedTeam">Powered By<strong><a href="#">oxox.io</a></strong></p>
                 </div>
             </div>
         </footer><!-- bottom footer -->
 
-        <footer class="footer" id="bottomFooter">
-            <div class="left">卖广告，骗点击！！！</div><a href="#" id="top">Go to Top <span>↑</span></a>
+        <footer class="footer footer2" id="bottomFooter">
+            <div class="left" id="dailySlogan"></div><a href="#" class="gotop" id="top">Go to Top <span>↑</span></a>
         </footer>
     </div>
 
@@ -101,7 +102,7 @@
     </script>
     <script type="text/x-tpl-mustache" id="tplNavItem">
     {{#cateList}}
-    <li class="menu-item"><p><a href="#" data-category="true" data-filter="{{name}}">{{name}} ({{cnt}})</a></p></li>
+    <li class="menu-item"><p><a href="#/category/{{name}}" data-category="true" data-filter="{{name}}">{{name}} ({{cnt}})</a></p></li>
     {{/cateList}}
     </script>
     <script type="text/x-tpl-mustache" id="tplShowcaseItem">
@@ -114,20 +115,24 @@
                 <p>{{desc}}</p>
             </div>
         </div>
+        <span class="folioPlus"></span>
+        <span class="folioShadow"></span>
     </a>
     {{/items}}
     </script>
     <!--E:templates-->
     <div id="scripts">
-        <div id="mobileCheck"></div>
-        <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/plugins.min.js" type="text/javascript"></script>
-        <script src="js/scripts.js" type="text/javascript"></script>
+        <div id="mobileCheck" class="mobile_check"></div>
+        <script src="//oxox.io/assets/js/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+        <script src="//oxox.io/assets/js/libs/jquery-plugins/jquery.easing-1.3.min.js"></script>
+        <script src="//oxox.io/assets/js/libs/jquery-plugins/jquery.isotope.min.js"></script>
+        <script src="js/jquery.oxPortfolio.js" type="text/javascript"></script>
     </div>
     <script src="js/j.core.js"></script>
     <script src="js/mustache.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="js/detail.js"></script>
     <script>
         J.init();
