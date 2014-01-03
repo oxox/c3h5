@@ -27,9 +27,7 @@ body {
   padding: 0 30px;
   position: fixed;
   z-index: 9;
-  /* below - beautiful css gradient :) */
-
-  background: #EF4C79;
+  background: #000;
 }
 .logo {
   height: 70px;
@@ -131,29 +129,29 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.menu ul.sub-menu {
+.sub-menu {
   margin-top: -3px;
 }
-.menu ul.sub-menu li {
+.sub-menu li {
   padding-left: 30px;
 }
-.menu ul.sub-menu li:first-child {
+.sub-menu li:first-child {
   margin-top: -2px;
 }
-.menu ul.sub-menu a {
+.sub-menu a {
   font-family: Arial, sans-serif;
   font-weight: 400;
   font-size: 12px;
   text-transform: none;
   text-shadow: none;
-  color: #FFE0D6;
+  color: #FEFEFE;
   padding-left: 45px;
   background: url(../img/defSprites.png) no-repeat 32px -72px transparent;
 }
-.menu ul.sub-menu > li:hover > p > a {
+.sub-menu > li:hover > p > a {
   background: url(../img/defSprites.png) no-repeat 32px -72px #e94a7a;
 }
-.menu ul.sub-menu > li.selected p > a {
+.sub-menu > li.selected p > a {
   background: url(../img/defSprites.png) no-repeat 32px -99px #ffffff;
   color: #393939 !important;
 }
@@ -229,9 +227,9 @@ body {
   height: 55px;
   position: absolute;
   bottom: 0;
-  border-top: 1px solid #F97042;
+  border-top: 1px solid #FEFEFE;
   font-size: 11px;
-  color: #F89E80;
+  color: #FEFEFE;
   padding-top: 14px;
   width: 220px;
 }
@@ -690,24 +688,8 @@ body {
 /* =============================================================================
    Other classes and fixes
    ========================================================================== */
-.hidden {
-  display: none;
-}
-.ie7 body {
-  overflow: hidden;
-  background: #F9632F !important;
-}
-.ie7 .content,
-.ie7 .aside {
-  display: none;
-}
-.ie8 .aside,
-.ie9 .aside {
-  width: 224px;
-}
-.ie8 .lk_close,
-.ie9 .lk_close {
-  right: -12px;
+.hidden,.hide{
+  display: none!important;
 }
 /* =============================================================================
    Light Sidebar Theme
@@ -822,31 +804,78 @@ body {
   font-size: 20px;
   margin-top: 6px;
 }
-.modern-loading {
-  position: absolute;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  background: url(http://oxox.io/assets/img/loading.gif) #94c849 center center no-repeat;
+
+/* xo_loader
+--------------------------*/
+.xo_loader{
+    position:absolute;
+    z-index: 12;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow: hidden;
+    background: #000;
 }
-.modern-loading-dot {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 5px;
-  height: 5px;
-  background: #FFFFFF;
-  transition-property: right;
-  transition-timing-function: ease-out;
-  -webkit-transition-property: right;
-  -webkit-transition-timing-function: ease-out;
+.xo_loader_animate {
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    margin: -12px 0 0 -65px; 
 }
-.modern-loading-ani {
-  right: 0;
+.xo_loader_animate span { 
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    background:#1d7ad9; 
+    border-radius: 50px; 
+    -webkit-animation: loader 0.9s infinite alternate; 
+    animation: loader 0.9s infinite alternate; 
 }
+.xo_loader.hide .xo_loader_animate span{
+    -webkit-animation: none; 
+    animation: none; 
+}
+.xo_loader_animate span:nth-of-type(2) { 
+    -webkit-animation-delay: 0.3s; 
+    animation-delay: 0.3s; 
+}
+.xo_loader_animate span:nth-of-type(3) { 
+    -webkit-animation-delay: 0.6s; 
+    animation-delay: 0.6s; 
+}
+
+@-webkit-keyframes loader {
+    0% { 
+        width: 10px; 
+        height: 10px; 
+        opacity: 0.8; 
+        -webkit-transform: translateY(0);
+    }
+    100% { 
+        width: 24px;
+        height: 24px;
+        opacity: 0.1;
+        -webkit-transform: translateY(-21px);
+    }
+}
+@keyframes loader {
+    0% { 
+        width: 10px;
+        height: 10px;
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+    100% { 
+        width: 24px;
+        height: 24px;
+        opacity: 0.1;
+        transform: translateY(-21px);
+    }
+}
+
 body.loading {
   display: block;
   margin: 0;

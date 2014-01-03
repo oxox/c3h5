@@ -55,7 +55,7 @@
             _onItemMouseout:function(item){
                 var $item = $(item);
                 $item.children("img").stop().animate({
-                    opacity: 0.5,
+                    opacity: 0.8,
                     marginTop: 0
                 }, 200, "easeOutQuad");
                 $item.children("span.folioPlus").stop().animate({
